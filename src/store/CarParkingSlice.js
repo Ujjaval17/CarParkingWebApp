@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialCarState = {
-  carData1: {},
+  carData1: [],
   carData: {},
   data: [],
   checkOut: false,
@@ -18,8 +18,8 @@ const CarParkingSlice = createSlice({
       state.carData = action.payload;
       state.carData1 = [...state.data, state.carData];
       state.data = state.carData1;
-      console.log("Test Car data:", state.carData);
-      console.log(state.carData1);
+    //   console.log("Test Car data:", state.carData);
+    //   console.log(state.carData1);
     },
 
     updateDetails(state, action) {
